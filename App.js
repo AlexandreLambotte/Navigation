@@ -1,8 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import A from './screens/A';
-import B from './screens/B';
+import TabNavigator from './components/TabNavigator';
 import RootNavigation from './screens/Root';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,9 +11,8 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="A" screenOptions={{headerShown: false }}>
-        <Tab.Screen name="A" component={A} />
-        <Tab.Screen name="B" component={B} />
+      <Tab.Navigator initialRouteName="Root" screenOptions={{ headerShown: false }}>
+        <Tab.Screen name="Tabs" component={TabNavigator} />
         <Tab.Screen name="Root" component={RootNavigation} />
       </Tab.Navigator>
     </NavigationContainer>
@@ -23,9 +21,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
   },
 });

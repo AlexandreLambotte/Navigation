@@ -10,9 +10,9 @@ export default function RootNavigation() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, // Le conteneur occupe tout l'espace
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'center', // Centre horizontalement
+        justifyContent: 'center', // Centre verticalement
     },
 });

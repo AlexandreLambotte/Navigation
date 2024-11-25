@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function B() {
+    const navigation = useNavigation();
     return (
         <View style={StyleSheet.container}>
             <Text>B Page</Text>
+            <Button title="To A" onPress={() => navigation.navigate('A')} />
         </View>
     )
 }
@@ -16,3 +19,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
+
+
